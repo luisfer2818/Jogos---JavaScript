@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br ">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Jquery</title>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+      <link rel="stylesheet" href="css/menu.css">
+      <link rel="shortcut icon" href="imagens/tesoura.png" />
+</head>     
+
+<style>
+
+.box {
+      width: 100px;
+      height: 100px;
+      background-color: #000;
+}
+
+button {
+      font-size: 1.8rem;
+      background-color: #000;
+      color: #fff;
+      padding: 0.8rem 1.7rem;
+}
+
+</style>
+ 
+<body class="text-center">
+
+      <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+            <header class="masthead mb-auto">
+                  <div class="inner">
+                        <h3 class="masthead-brand active">Jogos</h3>
+                        <nav class="nav nav-masthead justify-content-center">
+                              <a class="nav-link active" href="#">Home</a>
+                              <a class="nav-link" href="jogo_da_velha.html">Jogo da Velha</a>
+                              <a class="nav-link" href="jogo_pedra.html">Jogo Pedra, Papel e Tesoura</a>
+                        </nav>
+                  </div>
+            </header>
+
+            <div class="container">
+                  <div class="box"></div>
+                        <div class="box-top"></div>
+                              <div class="box-bottom"></div>
+                                    <div class="box-right"></div>
+                                    <div class="box-left"></div>
+                              <hr>
+                        <button id="next">> Next</button>
+                        <button id="top">^ Top</button>
+                        <button id="bottom">v Bottom</button>
+                  <button id="prev">< Prev</button>
+            </div>
+      </div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script>
+
+      $('#next').click( function() {
+            $('.box').animate({
+                  marginLeft: '590'
+            }, 350)
+      })
+
+      $('#top').click( function () {
+            $('.box').animate({
+                  marginBottom: '400'
+            }, 350)
+      })
+
+       $('#bottom').click( function () {
+            $('.box').animate({
+                  marginBottom: '0'
+            }, 350)
+      })
+
+      $('#prev').click( function() {
+            $('.box').animate({
+                  marginLeft: '0'
+            }, 350)
+      })
+
+</script>
+
+</body>
+</html>
